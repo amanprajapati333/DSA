@@ -4,17 +4,14 @@ class Solution {
         if (nums.length == 0) {
             return 0;
         }
-       
-        int left = 0;
 
-        for (int right = 1; right < nums.length; right++) {
-            if (nums[left] != nums[right]) {
-                left++;
-                nums[left] = nums[right];
+        int j=0;
+        for(int i=1;i<nums.length;i++){
+            if(nums[j]!=nums[i]){
+                j++;
+                nums[j]=nums[i];
             }
         }
-
-        return left + 1;
-    
+        return j+1;
     }
 }
